@@ -20,7 +20,8 @@ export const ImageUploader = () => {
           setUploadedFiles(
             response.data.map((file) => ({
               file: null,
-              id: file.id,
+              id: file._id,
+              key: file.key,
               name: file.name,
               readableSize: fileSize(file.size),
               preview: null,
